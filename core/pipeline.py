@@ -1,5 +1,6 @@
-from core.generator.llm import generate_title
 from core.generator.algo import build_roles
+from core.generator.llm import generate_title
+
 
 def gen_pipeline(data, prompt, model, strategy="GPT"):
     df = data.copy()

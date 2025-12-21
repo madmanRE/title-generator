@@ -1,10 +1,13 @@
 import os
+
 import dotenv
 from openai import OpenAI
 
+import streamlit as st
+
 dotenv.load_dotenv()
 
-OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+OPENAI_API_KEY = os.getenv('OPENAI_API_KEY') or st.secrets["'OPENAI_API_KEY"]
 
 client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=OPENAI_API_KEY)
 

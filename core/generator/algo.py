@@ -1,15 +1,11 @@
 import re
 from collections import Counter
 
-import pandas as pd
-
-from rapidfuzz import fuzz
-
-from sklearn.feature_extraction.text import TfidfVectorizer
-
-from natasha import Segmenter, NewsEmbedding, NewsNERTagger, Doc
-
 import nltk
+import pandas as pd
+from natasha import Doc, NewsEmbedding, NewsNERTagger, Segmenter
+from rapidfuzz import fuzz
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 nltk.download("stopwords")
 from nltk.corpus import stopwords
