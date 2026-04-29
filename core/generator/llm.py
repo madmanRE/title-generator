@@ -39,6 +39,6 @@ def generate_title(content, prompt, model, strategy="GPT"):
     response = client.chat.completions.create(
         model="gpt-5.4",
         messages=messages,
-        temperature=0.1
+        temperature=0.3
     )
     return response.choices[0].message.content
