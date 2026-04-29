@@ -37,7 +37,7 @@ with st.expander("📘 Инструкция по использованию"):
 with st.form("input_form"):
     strategy = st.selectbox("Выберите режим", ("GPT", "Algo"))
     model = st.selectbox("Укажите модель генерации ТЗ",
-                         ("mistralai/devstral-2512:free", "openai/gpt-oss-20b:free", "xiaomi/mimo-v2-flash:free",
+                         ("GPT", "mistralai/devstral-2512:free", "openai/gpt-oss-20b:free", "xiaomi/mimo-v2-flash:free",
                           "tngtech/deepseek-r1t2-chimera:free"))
     prompt = st.text_area(label="Текст промта", value=system_prompt, height=700)
     input_file = st.file_uploader("Вставте данные в формате xlsx")
